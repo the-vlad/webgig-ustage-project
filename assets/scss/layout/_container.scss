@@ -1,0 +1,33 @@
+.us-container {
+  margin: 0 auto;
+  max-width: 1725px;
+  width: 100%;
+
+  @include respond-below(beforehd) {
+    max-width: 1380px;
+  }
+
+  @include respond-below(hd) {
+    max-width: 1300px;
+  }
+
+  @include respond-below(lg) {
+    max-width: 1060px;
+  }
+
+  @include respond-below(md) {
+    max-width: 950px;
+  }
+
+  @include respond-below(sm) {
+    max-width: 90%;
+    width: 100%;
+    padding: 0px;
+  }
+
+  &--wide {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+

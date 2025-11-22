@@ -1,0 +1,40 @@
+footer{
+    height:510px;
+    background: #031B32;
+    position: relative;
+
+    .us-container{
+        // overflow: hidden;
+    }
+}
+
+
+.grid-bg2{
+  /* example background image (your uploaded file) */
+background:
+  /* grid: vertical + horizontal lines combined */
+  linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px),
+  url('/mnt/data/1f783f85-853d-4d34-aaf9-d116a6d329a6.png'); /* your image */
+
+background-size:
+  var(--size, 80px) var(--size, 80px),
+  var(--size, 80px) var(--size, 80px),
+  cover;
+  background-size:
+    var(--size, 80px) var(--size, 80px),    /* grid cell size */
+    var(--size, 80px) var(--size, 80px),    /* grid cell size (both gradients) */
+    cover;                                   /* image sizing */
+  background-position: 0 0, 0 0, center;
+  background-repeat: repeat, repeat, no-repeat;
+
+  /* sizing & demo styles */
+  min-height: 510px;
+  padding: 40px;
+  box-sizing: border-box;
+  position:absolute;
+  top:0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}

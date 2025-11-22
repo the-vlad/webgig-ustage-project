@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'Tahu';
+    src: url('Tahu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Your other styles can use this font-family now */
+  body {
+    font-family: 'Tahu', sans-serif;
+  }
+  

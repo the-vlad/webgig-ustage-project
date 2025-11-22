@@ -1,0 +1,41 @@
+.grid-bg{
+  /* example background image (your uploaded file) */
+  background:
+    /* grid: vertical + horizontal lines combined */
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px),
+    url('/mnt/data/2538caa4-285a-4be8-aa9e-5686fc94289a.png'); /* your image */
+  background-size:
+    var(--size, 80px) var(--size, 80px),    /* grid cell size */
+    var(--size, 80px) var(--size, 80px),    /* grid cell size (both gradients) */
+    cover;                                   /* image sizing */
+  background-position: 0 0, 0 0, center;
+  background-repeat: repeat, repeat, no-repeat;
+
+  /* sizing & demo styles */
+  min-height: 560px;
+  padding: 40px;
+  box-sizing: border-box;
+  margin-top:-120px;
+}
+
+/* content demo */
+
+
+.searchPortal{
+    margin:0 auto;
+    margin-top:20%;
+}
+
+.hero-box {
+    padding-top:15px;
+
+    &--row{
+        display:flex;
+        justify-content: space-between;
+        max-width: 38%;
+        margin:0 auto;
+        margin-top:25px;
+        align-items: center;
+    }
+}

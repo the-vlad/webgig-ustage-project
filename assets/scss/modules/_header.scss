@@ -1,0 +1,27 @@
+.us-header{
+    background:rgba(255, 255, 255, 0.582);
+    position: absolute;
+    top:0;
+    width: 100%;
+    &--row{
+        padding-top:40px;
+        padding-bottom: 20px;;
+        display:flex;
+        justify-content: space-between;
+
+        .us-logo{
+            width:20%;
+
+            img{
+                height: 48px;
+                width: auto;
+            }
+        }
+
+        .us-login{
+            width:25%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
