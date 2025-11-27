@@ -58,8 +58,19 @@ class US_Options {
             ])
 
         ->endGroup()
+        
+            ->addImage('footer_logo', [
+                'label' => 'Footer Logo',
+                'instructions' => '',
+                'required' => 0,
+                'return_format' => 'url',
+            ])
 
-            ->addText('footer_copyright', [
+         ->addWysiwyg('footer_description', [
+            'label' => __('Footer description')
+            ])
+
+          ->addText('footer_copyright', [
                 'label' => __('Copyright text')
             ]);
 

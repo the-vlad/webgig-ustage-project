@@ -38,6 +38,14 @@ h1{
     line-height: 1;
 }
 
+h2,h3,h4,h5 {
+         font-family: "Aeonik";
+}
+
+p{
+     font-family: "Aeonik"!important; 
+}
+
 a{
     text-decoration: none;
 }
@@ -143,25 +151,99 @@ a{
     }
 
 }
-
-
-
-.cloud-box{
-      font-family: "Aeonik";
-      font-size:18px;
-      padding:18px 19px;
-      border-radius:36px;
-      border:2px solid #7D0ABF33;
-      color:#7D0ABF;
-      max-width:fit-content;
-      display:flex;
-      justify-content:center;
-
-
-      img{
-        width:20px;
-        height: auto;
-        padding-right:5.5px;
-      }
+.cloud-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
+.cloud-box {
+  font-family: "Aeonik";
+  font-size: 18px;
+  padding: 18px 19px;
+  border-radius: 36px;
+  border: 2px solid #7D0ABF33;
+  color: #7D0ABF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: fit-content;  
+  font-weight: 600;
+  
+  /* <-- important */
+}
+
+.row-4 {
+  .cloud-box:nth-child(1) {
+    background-color: rgba(252, 250, 254, 1);
+  }
+
+  .cloud-box:nth-child(2) {
+    background-color: rgba(254, 253, 250, 1);
+    border: 2px solid rgba(191, 146, 10, 0.2);
+    color: rgba(191, 146, 10, 1);
+  }
+
+  .cloud-box:nth-child(3) {
+    background-color: rgba(250, 254, 253, 1);
+    border: 2px solid rgba(10, 191, 128, 0.2);
+    color: rgba(10, 191, 128, 1);
+  }
+
+  .cloud-box:nth-child(4) {
+    background-color: rgba(252, 253, 250, 1);
+    border: 2px solid rgba(114, 165, 11, 0.2);
+    color: rgba(114, 165, 11, 1);
+  }
+}
+
+.row-3 {
+  .cloud-box:nth-child(1) {
+    background-color: rgba(255, 252, 250, 1);
+    color: rgba(247, 93, 21, 1);
+    border: 2px solid rgba(247, 93, 21, 0.2);
+  }
+
+  .cloud-box:nth-child(2) {
+    background-color: rgba(250, 251, 254, 1);
+    color: rgba(13, 75, 181, 1);
+    border: 2px solid rgba(13, 75, 181, 0.2);
+  }
+
+  .cloud-box:nth-child(3) {
+    background-color: rgba(250, 253, 253, 1);
+    border: 2px solid rgba(9, 172, 175, 0.2);
+    color: rgba(9, 172, 175, 1);
+  }
+}
+
+.row-2 {
+  .cloud-box:nth-child(1) {
+    background-color: rgba(254, 250, 251, 1);
+    color: rgba(187, 0, 40, 1);
+    border: 2px solid rgba(187, 0, 40, 0.2);
+  }
+
+  .cloud-box:nth-child(2) {
+    background-color: rgba(254, 250, 254, 1);
+    color: rgba(197, 10, 194, 1);
+    border: 2px solid rgba(197, 10, 194, 0.2);
+  }
+}
+
+.cloud-box img {
+  width: 20px;
+  margin-right: 6px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}

@@ -52,6 +52,10 @@ require_once get_template_directory() . '/templates/US_Home.php';
 require_once get_template_directory() . '/templates/US_Contact.php';
 require_once get_template_directory() . '/templates/US_Projects.php';
 require_once get_template_directory() . '/templates/US_Team.php';
+require_once get_template_directory() . '/templates/US_EntertainerForm.php';
+require_once get_template_directory() . '/templates/US_CustomerForm.php';
+require_once get_template_directory() . '/templates/US_Login.php';
+require_once get_template_directory() . '/templates/US_Reset.php';
 
 
 final class UF_Init
@@ -64,6 +68,12 @@ final class UF_Init
         US_Home::class,
         US_Contact::class,
         US_Team::class,
+        US_EntertainerForm::class,
+        US_CustomerForm::class,
+        US_Login::class,
+        US_Reset::class,
+
+
        ];
     }
 
@@ -86,3 +96,69 @@ add_theme_support('post-thumbnails');
 
 
 add_theme_support( 'post-thumbnails' );
+
+
+add_action('init', function() {
+    register_nav_menus([
+        'footer_menu_1' => __('Footer Menu 1'),
+        'footer_menu_2' => __('Footer Menu 2'),
+    ]);
+});
+
+
+function load_jquery_fix() {
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'load_jquery_fix');
+
+
+/**
+ * Replace Ultimate Member "Forgot your password?" text with "Reset Password"
+ * - Covers UM label filter (best-effort)
+ * - Also covers gettext / ngettext translation sources
+ */
+
+add_filter( 'um_get_label_value', 'vc_replace_um_forgot_label', 20, 2 );
+function vc_replace_um_forgot_label( $value, $key ) {
+    // If we can match by key (some UM installs use a key)
+    if ( ! empty( $key ) && in_array( $key, array( 'forgot_password', 'lost_password', 'forgot_your_password' ), true ) ) {
+        return 'Reset Password';
+    }
+
+    // Fallback: match exact string
+    if ( trim( $value ) === 'Forgot your password?' ) {
+        return 'Reset Password';
+    }
+
+    return $value;
+}
+
+// gettext fallback (catches strings loaded via translations)
+add_filter( 'gettext', 'vc_replace_um_forgot_gettext', 20, 3 );
+function vc_replace_um_forgot_gettext( $translated_text, $text, $domain ) {
+    // Match exact original string (not translated)
+    if ( $text === 'Forgot your password?' ) {
+        return 'Reset Password';
+    }
+    return $translated_text;
+}
+
+// ngettext fallback for pluralized variants (rare for this phrase)
+add_filter( 'ngettext', 'vc_replace_um_forgot_ngettext', 20, 4 );
+function vc_replace_um_forgot_ngettext( $translated, $single, $plural, $number ) {
+    if ( $single === 'Forgot your password?' || $plural === 'Forgot your password?' ) {
+        return 'Reset Password';
+    }
+    return $translated;
+}
+
+
+
+
+add_filter('gettext_ultimate-member', 'um_021522_change_reset_password_labels', 10, 3);
+function um_021522_change_reset_password_labels($translation, $text, $domain) {
+    if ('To reset your password, please enter your email address or username below.' == $text) {
+        $translation = 'Email Address';
+    } 
+    return $translation;
+}

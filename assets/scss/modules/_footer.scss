@@ -1,40 +1,132 @@
-footer{
-    height:510px;
-    background: #031B32;
-    position: relative;
-
-    .us-container{
-        // overflow: hidden;
-    }
+footer {
+  height: 510px;
+  background: #031B32;
+  position: relative;
 }
 
+.grid-bg2 {
+  /* background layers */
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    url('/mnt/data/1f783f85-853d-4d34-aaf9-d116a6d329a6.png');
 
-.grid-bg2{
-  /* example background image (your uploaded file) */
-background:
-  /* grid: vertical + horizontal lines combined */
-  linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
-  linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px),
-  url('/mnt/data/1f783f85-853d-4d34-aaf9-d116a6d329a6.png'); /* your image */
-
-background-size:
-  var(--size, 80px) var(--size, 80px),
-  var(--size, 80px) var(--size, 80px),
-  cover;
   background-size:
-    var(--size, 80px) var(--size, 80px),    /* grid cell size */
-    var(--size, 80px) var(--size, 80px),    /* grid cell size (both gradients) */
-    cover;                                   /* image sizing */
-  background-position: 0 0, 0 0, center;
-  background-repeat: repeat, repeat, no-repeat;
+    80px 80px,
+    80px 80px,
+    cover;
 
-  /* sizing & demo styles */
+  background-position:
+    center center,
+    center center,
+    center center;
+
+  background-repeat:
+    repeat,
+    repeat,
+    no-repeat;
+
   min-height: 510px;
   padding: 40px;
   box-sizing: border-box;
-  position:absolute;
-  top:0;
-  width: 100%;
+
+  position: absolute;
+  top: 0;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
 }
+
+.footer-content {
+  max-width: 40%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Aeonik";
+    line-height: 1.5;
+    padding-top: 10px;
+  }
+}
+
+.footer-copyright {
+  max-width: 40%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Aeonik";
+  line-height: 1.5;
+}
+
+.social-list {
+  display: flex;
+  max-width: 18%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px 0;
+
+  li {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.32);
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  img {
+    // width: auto;
+    // height: 20px;
+  }
+}
+
+.foot-row {
+  display: flex;
+  max-width: 45%;
+  margin: 65px auto 0;
+  justify-content: space-between;
+
+  .foot-col1 {
+    justify-content: flex-end;
+  }
+
+  .foot-col {
+    max-width: 49%;
+    width: 100%;
+    display: flex;
+  }
+
+  .foot-col ul {
+    width: 100%;
+    display: flex;
+
+    li {
+      padding-right: 10px;
+
+      a {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: "Aeonik";
+        line-height: 1.5;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+

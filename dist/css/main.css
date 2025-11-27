@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Aeonik";
   src: url("https://db.onlinewebfonts.com/t/d95bf2f30035a050142565e03d44da71.eot");
@@ -18,6 +19,14 @@ h1 {
   font-family: "Aeonik Medium" !important;
   font-weight: 450 !important;
   line-height: 1;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Aeonik";
+}
+
+p {
+  font-family: "Aeonik" !important;
 }
 
 a {
@@ -119,6 +128,14 @@ a {
   padding-left: 18px;
 }
 
+.cloud-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
 .cloud-box {
   font-family: "Aeonik";
   font-size: 18px;
@@ -126,20 +143,79 @@ a {
   border-radius: 36px;
   border: 2px solid rgba(125, 10, 191, 0.2);
   color: #7D0ABF;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  /* <-- important */
 }
+
+.row-4 .cloud-box:nth-child(1) {
+  background-color: rgb(252, 250, 254);
+}
+.row-4 .cloud-box:nth-child(2) {
+  background-color: rgb(254, 253, 250);
+  border: 2px solid rgba(191, 146, 10, 0.2);
+  color: rgb(191, 146, 10);
+}
+.row-4 .cloud-box:nth-child(3) {
+  background-color: rgb(250, 254, 253);
+  border: 2px solid rgba(10, 191, 128, 0.2);
+  color: rgb(10, 191, 128);
+}
+.row-4 .cloud-box:nth-child(4) {
+  background-color: rgb(252, 253, 250);
+  border: 2px solid rgba(114, 165, 11, 0.2);
+  color: rgb(114, 165, 11);
+}
+
+.row-3 .cloud-box:nth-child(1) {
+  background-color: rgb(255, 252, 250);
+  color: rgb(247, 93, 21);
+  border: 2px solid rgba(247, 93, 21, 0.2);
+}
+.row-3 .cloud-box:nth-child(2) {
+  background-color: rgb(250, 251, 254);
+  color: rgb(13, 75, 181);
+  border: 2px solid rgba(13, 75, 181, 0.2);
+}
+.row-3 .cloud-box:nth-child(3) {
+  background-color: rgb(250, 253, 253);
+  border: 2px solid rgba(9, 172, 175, 0.2);
+  color: rgb(9, 172, 175);
+}
+
+.row-2 .cloud-box:nth-child(1) {
+  background-color: rgb(254, 250, 251);
+  color: rgb(187, 0, 40);
+  border: 2px solid rgba(187, 0, 40, 0.2);
+}
+.row-2 .cloud-box:nth-child(2) {
+  background-color: rgb(254, 250, 254);
+  color: rgb(197, 10, 194);
+  border: 2px solid rgba(197, 10, 194, 0.2);
+}
+
 .cloud-box img {
   width: 20px;
-  height: auto;
-  padding-right: 5.5px;
+  margin-right: 6px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 .us-container {
   margin: 0 auto;
-  max-width: 1725px;
+  max-width: 1720px;
   width: 100%;
 }
 @media (max-width: 1790px) {
@@ -217,20 +293,689 @@ h6 {
   margin: 0px;
 }
 
+.page-template-entertainer-registration-template-php {
+  background: rgb(255, 255, 255);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.page-template-entertainer-registration-template-php .go-back-btn {
+  display: flex;
+  align-items: center;
+  font-family: "Aeonik Medium";
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(9, 5, 3);
+}
+.page-template-entertainer-registration-template-php .go-back-btn img {
+  padding-right: 10px;
+}
+.page-template-entertainer-registration-template-php header {
+  display: none;
+}
+.page-template-entertainer-registration-template-php .login-txt {
+  font-size: 18px;
+  font-family: "Aeonik";
+}
+.page-template-entertainer-registration-template-php .login-txt a {
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-entertainer-registration-template-php footer {
+  display: none;
+}
+.page-template-entertainer-registration-template-php .us-register {
+  display: flex;
+  align-items: center;
+}
+.page-template-entertainer-registration-template-php .us-register--row {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left {
+  max-width: 32%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Aeonik";
+  font-size: 18px;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .reg-txt a {
+  font-size: 18px;
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left h1 {
+  text-transform: capitalize;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-field-error {
+  font-family: "Aeonik";
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-register {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 10px !important;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-register label {
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(9, 5, 3);
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-register input {
+  border-radius: 12px;
+  height: 54px !important;
+  border: 1.5px solid rgba(9, 5, 3, 0.2) !important;
+  font-size: 18px;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-register input::-moz-placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-register input::placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left .um-col-alt .um-center {
+  display: flex;
+  justify-content: flex-start;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-left #um-submit-btn {
+  border: none !important;
+  font-family: "Aeonik Pro Bold";
+  color: white;
+  font-size: 18px !important;
+  background: rgba(191, 68, 10, 0.4) !important;
+  border-radius: 12px !important;
+  height: 54px !important;
+  min-width: 188px !important;
+  padding: 16px 28px !important;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-right {
+  max-width: 58%;
+  overflow: hidden;
+}
+.page-template-entertainer-registration-template-php .us-register--row .reg-right img {
+  height: 700px;
+  width: auto;
+}
+
+.upside-part {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  height: 450px;
+  width: auto;
+  z-index: -1;
+}
+
+.page-template-customer-registration-template-php {
+  background: rgb(255, 255, 255);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.page-template-customer-registration-template-php .go-back-btn {
+  display: flex;
+  align-items: center;
+  font-family: "Aeonik Medium";
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(9, 5, 3);
+}
+.page-template-customer-registration-template-php .go-back-btn img {
+  padding-right: 10px;
+}
+.page-template-customer-registration-template-php header {
+  display: none;
+}
+.page-template-customer-registration-template-php .login-txt {
+  font-size: 18px;
+  font-family: "Aeonik";
+}
+.page-template-customer-registration-template-php .login-txt a {
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-customer-registration-template-php footer {
+  display: none;
+}
+.page-template-customer-registration-template-php .us-register {
+  display: flex;
+  align-items: center;
+}
+.page-template-customer-registration-template-php .us-register--row {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left {
+  max-width: 32%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Aeonik";
+  font-size: 18px;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .reg-txt a {
+  font-size: 18px;
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left h1 {
+  text-transform: capitalize;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-field-error {
+  font-family: "Aeonik";
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-register {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 10px !important;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-register label {
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(9, 5, 3);
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-register input {
+  border-radius: 12px;
+  height: 54px !important;
+  border: 1.5px solid rgba(9, 5, 3, 0.2) !important;
+  font-size: 18px;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-register input::-moz-placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-register input::placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left .um-col-alt .um-center {
+  display: flex;
+  justify-content: flex-start;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-left #um-submit-btn {
+  border: none !important;
+  font-family: "Aeonik Pro Bold";
+  color: white;
+  font-size: 18px !important;
+  background: rgba(191, 68, 10, 0.4) !important;
+  border-radius: 12px !important;
+  height: 54px !important;
+  min-width: 188px !important;
+  padding: 16px 28px !important;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-right {
+  max-width: 58%;
+  overflow: hidden;
+}
+.page-template-customer-registration-template-php .us-register--row .reg-right img {
+  height: 700px;
+  width: auto;
+}
+
+.page-template-login-template-php {
+  background: rgb(255, 255, 255);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.page-template-login-template-php .go-back-btn {
+  display: flex;
+  align-items: center;
+  font-family: "Aeonik Medium";
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(9, 5, 3);
+}
+.page-template-login-template-php .go-back-btn img {
+  padding-right: 10px;
+}
+.page-template-login-template-php header {
+  display: none;
+}
+.page-template-login-template-php .login-txt {
+  font-size: 18px;
+  font-family: "Aeonik";
+}
+.page-template-login-template-php .login-txt a {
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-login-template-php footer {
+  display: none;
+}
+.page-template-login-template-php .us-register {
+  display: flex;
+  align-items: center;
+}
+.page-template-login-template-php .us-register--row {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.page-template-login-template-php .us-register--row .reg-left {
+  max-width: 32%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Aeonik";
+  font-size: 18px;
+}
+.page-template-login-template-php .us-register--row .reg-left .reg-txt a {
+  font-size: 18px;
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-login-template-php .us-register--row .reg-left h1 {
+  text-transform: capitalize;
+}
+.page-template-login-template-php .us-register--row .reg-left .um-field-error {
+  font-family: "Aeonik";
+}
+.page-template-login-template-php .us-register--row .reg-left .um-login {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 10px !important;
+}
+.page-template-login-template-php .us-register--row .reg-left .um-login label {
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(9, 5, 3);
+}
+.page-template-login-template-php .us-register--row .reg-left .um-login input {
+  border-radius: 12px;
+  height: 54px !important;
+  border: 1.5px solid rgba(9, 5, 3, 0.2) !important;
+  font-size: 18px;
+}
+.page-template-login-template-php .us-register--row .reg-left .um-login input::-moz-placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-login-template-php .us-register--row .reg-left .um-login input::placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-login-template-php .us-register--row .reg-left .um-col-alt .um-center {
+  display: flex;
+  justify-content: flex-start;
+}
+.page-template-login-template-php .us-register--row .reg-left #um-submit-btn {
+  border: none !important;
+  font-family: "Aeonik Pro Bold";
+  color: white;
+  font-size: 18px !important;
+  background: rgba(191, 68, 10, 0.4) !important;
+  border-radius: 12px !important;
+  height: 54px !important;
+  min-width: 188px !important;
+  padding: 16px 28px !important;
+}
+.page-template-login-template-php .us-register--row .reg-right {
+  max-width: 58%;
+  overflow: hidden;
+}
+.page-template-login-template-php .us-register--row .reg-right img {
+  height: 700px;
+  width: auto;
+}
+
+.um-login form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.um-login .um-col-alt {
+  order: 2;
+  display: flex !important;
+}
+.um-login .um-col-alt-b {
+  order: 1 !important;
+  display: flex !important;
+  justify-content: flex-end;
+  margin-top: -20px !important;
+  padding-top: 0px !important;
+}
+.um-login .um-col-alt-b a {
+  color: rgb(191, 68, 10) !important;
+}
+
+.um-eye-toggle {
+  color: rgb(191, 68, 10) !important;
+}
+
+/* Style the eye icon */
+.um-eye-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+  color: #000;
+  opacity: 0.7;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.um-eye-toggle:hover {
+  opacity: 1;
+}
+
+.um-eye-toggle img {
+  width: 22px;
+  height: 22px;
+}
+
+.page-template-reset-template-php {
+  background: rgb(255, 255, 255);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.page-template-reset-template-php .go-back-btn {
+  display: flex;
+  align-items: center;
+  font-family: "Aeonik Medium";
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(9, 5, 3);
+}
+.page-template-reset-template-php .go-back-btn img {
+  padding-right: 10px;
+}
+.page-template-reset-template-php header {
+  display: none;
+}
+.page-template-reset-template-php .login-txt {
+  font-size: 18px;
+  font-family: "Aeonik";
+}
+.page-template-reset-template-php .login-txt a {
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-reset-template-php footer {
+  display: none;
+}
+.page-template-reset-template-php .us-register {
+  display: flex;
+  align-items: center;
+}
+.page-template-reset-template-php .us-register--row {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.page-template-reset-template-php .us-register--row .reg-left {
+  max-width: 32%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Aeonik";
+  font-size: 18px;
+}
+.page-template-reset-template-php .us-register--row .reg-left .reset-txt a {
+  font-size: 18px;
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+}
+.page-template-reset-template-php .us-register--row .reg-left h1 {
+  text-transform: capitalize;
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-field-error {
+  font-family: "Aeonik";
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-password {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 10px !important;
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-password .um-field-block div {
+  text-align: left !important;
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(9, 5, 3);
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-password label {
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(9, 5, 3);
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-password input {
+  border-radius: 12px;
+  height: 54px !important;
+  border: 1.5px solid rgba(9, 5, 3, 0.2) !important;
+  font-size: 18px;
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-password input::-moz-placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-password input::placeholder {
+  color: rgba(9, 5, 3, 0.4) !important;
+  font-size: 18px !important;
+}
+.page-template-reset-template-php .us-register--row .reg-left .um-col-alt .um-center {
+  display: flex;
+  justify-content: flex-start;
+}
+.page-template-reset-template-php .us-register--row .reg-left #um-submit-btn {
+  border: none !important;
+  font-family: "Aeonik Pro Bold";
+  color: white;
+  font-size: 18px !important;
+  background: rgba(191, 68, 10, 0.4) !important;
+  border-radius: 12px !important;
+  height: 54px !important;
+  min-width: 188px !important;
+  padding: 16px 28px !important;
+}
+.page-template-reset-template-php .us-register--row .reg-right {
+  max-width: 58%;
+  overflow: hidden;
+}
+.page-template-reset-template-php .us-register--row .reg-right img {
+  height: 700px;
+  width: auto;
+}
+
+.inner-content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  max-width: 87%;
+  margin: 0 auto;
+}
+
+.customer-bg {
+  background: rgb(32, 93, 151) !important;
+  margin-bottom: 100px !important;
+  margin-top: 70px !important;
+}
+.customer-bg .side-img {
+  top: 7%;
+}
+
+.enter {
+  position: relative;
+  background: rgb(9, 5, 3);
+  border-radius: 40px;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+.enter--top h2 {
+  color: white;
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: 500;
+}
+.enter--top strong {
+  color: rgb(216, 220, 12) !important;
+  font-weight: bold;
+  font-family: "Aeonik Pro Bold";
+}
+.enter--top p {
+  color: white;
+  margin-bottom: 45px;
+  font-size: 20px;
+}
+.enter--bottom {
+  display: flex;
+  margin-top: 100px;
+  width: 85%;
+  justify-content: space-between;
+  display: flex;
+}
+.enter--bottom .enter-card {
+  padding: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  border-radius: 20px;
+}
+.enter--bottom .enter-card p {
+  font-family: "Aeonik Pro Bold" !important;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+}
+
+.side-img {
+  height: 85%;
+  width: auto;
+  position: absolute;
+  right: 2%;
+  z-index: 0;
+  top: 0;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.faq {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.faq--left {
+  max-width: 48%;
+}
+.faq--left h2 {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 80px;
+  color: rgb(9, 5, 3);
+}
+.faq--left p {
+  font-family: "Aeonik" !important;
+  font-size: 20px;
+  color: rgba(9, 5, 3, 0.48);
+}
+.faq--left p a {
+  font-weight: bold;
+  color: rgb(191, 68, 10);
+  font-family: "Aeonik Pro Bold";
+  padding-left: 5px;
+  cursor: pointer;
+}
+.faq--right {
+  max-width: 48%;
+  border: 2px solid rgba(9, 5, 3, 0.12);
+  border-radius: 36px;
+  padding: 40px;
+}
+.faq--right .faq-question {
+  color: rgb(191, 68, 10);
+  font-weight: bold;
+  font-family: "Aeonik Pro Bold";
+  font-size: 18px;
+  background-color: rgb(253, 248, 245);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(191, 68, 10, 0.48);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.faq-accordion {
+  width: 580px;
+}
+
+.faq-answer {
+  margin-top: -30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.faq-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  font-weight: bold;
+  background-color: rgba(191, 68, 10, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  height: 32px;
+  width: 32px;
+}
+
 .grid-bg {
-  /* example background image (your uploaded file) */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px), url("/mnt/data/2538caa4-285a-4be8-aa9e-5686fc94289a.png"); /* your image */
-  background-size: var(--size, 80px) var(--size, 80px), var(--size, 80px) var(--size, 80px), cover; /* image sizing */
-  background-position: 0 0, 0 0, center;
+  /* GRID LINES (vertical + horizontal) */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px), url("/mnt/data/e0b15184-e548-43d1-8116-b2dda07d61c3.png"); /* your uploaded image */
+  /* GRID SIZE */
+  background-size: 80px 80px, 80px 80px, cover; /* background image */
+  /* ⭐ FIX: Center the grid so the right side is aligned perfectly */
+  background-position: center center, center center, center center;
   background-repeat: repeat, repeat, no-repeat;
-  /* sizing & demo styles */
+  /* Your existing styles */
   min-height: 560px;
   padding: 40px;
   box-sizing: border-box;
   margin-top: -120px;
 }
 
-/* content demo */
+.hero {
+  position: relative;
+}
+
+/* CONTENT BELOW */
 .searchPortal {
   margin: 0 auto;
   margin-top: 20%;
@@ -239,6 +984,7 @@ h6 {
 .hero-box {
   padding-top: 15px;
 }
+
 .hero-box--row {
   display: flex;
   justify-content: space-between;
@@ -248,9 +994,56 @@ h6 {
   align-items: center;
 }
 
+.cloud-wrapper {
+  padding-top: 40px;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.mac-studio .mac-studio-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.mac-studio .mac-studio-wrapper .leftEl {
+  width: auto;
+  display: block;
+  position: absolute;
+  height: 550px;
+  left: 0 !important;
+  z-index: -1;
+  top: 30px;
+}
+.mac-studio .mac-studio-wrapper .rightEl {
+  width: auto;
+  display: block;
+  position: absolute;
+  height: 550px;
+  right: 0 !important;
+  z-index: -1;
+  top: 30px;
+}
+.mac-studio .mac-studio-wrapper .img-mac {
+  margin-top: 100px;
+  background-size: cover;
+  width: 100%;
+  z-index: 3;
+}
+
+.bg-bottom {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 210px;
+  display: block;
+  position: absolute;
+  bottom: -5%;
+  z-index: 0;
+}
+
 .us-container {
   margin: 0 auto;
-  max-width: 1725px;
+  max-width: 1720px;
   width: 100%;
 }
 @media (max-width: 1790px) {
@@ -289,6 +1082,7 @@ h6 {
   background: rgba(255, 255, 255, 0.582);
   position: absolute;
   top: 0;
+  z-index: 99;
   width: 100%;
 }
 .us-header--row {
@@ -299,6 +1093,7 @@ h6 {
 }
 .us-header--row .us-logo {
   width: 20%;
+  cursor: pointer;
 }
 .us-header--row .us-logo img {
   height: 48px;
@@ -315,20 +1110,96 @@ footer {
   background: #031B32;
   position: relative;
 }
+
 .grid-bg2 {
-  /* example background image (your uploaded file) */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px), url("/mnt/data/1f783f85-853d-4d34-aaf9-d116a6d329a6.png"); /* your image */
-  background-size: var(--size, 80px) var(--size, 80px), var(--size, 80px) var(--size, 80px), cover;
-  background-size: var(--size, 80px) var(--size, 80px), var(--size, 80px) var(--size, 80px), cover; /* image sizing */
-  background-position: 0 0, 0 0, center;
+  /* background layers */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px), url("/mnt/data/1f783f85-853d-4d34-aaf9-d116a6d329a6.png");
+  background-size: 80px 80px, 80px 80px, cover;
+  background-position: center center, center center, center center;
   background-repeat: repeat, repeat, no-repeat;
-  /* sizing & demo styles */
   min-height: 510px;
   padding: 40px;
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  width: 100%;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
+}
+
+.footer-content {
+  max-width: 40%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content img {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.footer-content p {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Aeonik";
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+.footer-copyright {
+  max-width: 40%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Aeonik";
+  line-height: 1.5;
+}
+
+.social-list {
+  display: flex;
+  max-width: 18%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+.social-list li {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  padding: 10px;
+}
+.foot-row {
+  display: flex;
+  max-width: 45%;
+  margin: 65px auto 0;
+  justify-content: space-between;
+}
+.foot-row .foot-col1 {
+  justify-content: flex-end;
+}
+.foot-row .foot-col {
+  max-width: 49%;
+  width: 100%;
+  display: flex;
+}
+.foot-row .foot-col ul {
+  width: 100%;
+  display: flex;
+}
+.foot-row .foot-col ul li {
+  padding-right: 10px;
+}
+.foot-row .foot-col ul li a {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Aeonik";
+  line-height: 1.5;
+  padding-top: 10px;
 }
