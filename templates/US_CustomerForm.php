@@ -32,7 +32,7 @@ class US_CustomerForm {
      
 
      $custom_schema
-        ->setLocation('post_template', '==', 'customer-registration-template');
+        ->setLocation('post_template', '==', 'customer-registration-template.php');
         acf_add_local_field_group($custom_schema->build());
    
     }

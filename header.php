@@ -43,7 +43,20 @@
             </div>
 
             <div class="us-login">
-                <a href="#" class="btn-default-sm">Log in</a>
+         <?php if ( is_user_logged_in() ) : ?>
+
+              <a href="<?php echo home_url('/account/'); ?>" class="btn-default-sm">
+                  My account
+              </a>
+
+          <?php else : ?>
+
+              <a href="<?php echo home_url('/login/'); ?>" class="btn-default-sm">
+                  Log in
+              </a>
+
+          <?php endif; ?>
+
             </div>
 
         </div>

@@ -293,11 +293,6 @@ h6 {
   margin: 0px;
 }
 
-.page-template-entertainer-registration-template-php {
-  background: rgb(255, 255, 255);
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
 .page-template-entertainer-registration-template-php .go-back-btn {
   display: flex;
   align-items: center;
@@ -308,6 +303,9 @@ h6 {
 }
 .page-template-entertainer-registration-template-php .go-back-btn img {
   padding-right: 10px;
+}
+.page-template-entertainer-registration-template-php {
+  background: rgb(255, 255, 255);
 }
 .page-template-entertainer-registration-template-php header {
   display: none;
@@ -322,6 +320,10 @@ h6 {
 }
 .page-template-entertainer-registration-template-php footer {
   display: none;
+}
+.page-template-entertainer-registration-template-php {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 .page-template-entertainer-registration-template-php .us-register {
   display: flex;
@@ -411,11 +413,6 @@ h6 {
   z-index: -1;
 }
 
-.page-template-customer-registration-template-php {
-  background: rgb(255, 255, 255);
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
 .page-template-customer-registration-template-php .go-back-btn {
   display: flex;
   align-items: center;
@@ -426,6 +423,9 @@ h6 {
 }
 .page-template-customer-registration-template-php .go-back-btn img {
   padding-right: 10px;
+}
+.page-template-customer-registration-template-php {
+  background: rgb(255, 255, 255);
 }
 .page-template-customer-registration-template-php header {
   display: none;
@@ -440,6 +440,10 @@ h6 {
 }
 .page-template-customer-registration-template-php footer {
   display: none;
+}
+.page-template-customer-registration-template-php {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 .page-template-customer-registration-template-php .us-register {
   display: flex;
@@ -520,11 +524,6 @@ h6 {
   width: auto;
 }
 
-.page-template-login-template-php {
-  background: rgb(255, 255, 255);
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
 .page-template-login-template-php .go-back-btn {
   display: flex;
   align-items: center;
@@ -535,6 +534,9 @@ h6 {
 }
 .page-template-login-template-php .go-back-btn img {
   padding-right: 10px;
+}
+.page-template-login-template-php {
+  background: rgb(255, 255, 255);
 }
 .page-template-login-template-php header {
   display: none;
@@ -549,6 +551,10 @@ h6 {
 }
 .page-template-login-template-php footer {
   display: none;
+}
+.page-template-login-template-php {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 .page-template-login-template-php .us-register {
   display: flex;
@@ -677,11 +683,6 @@ h6 {
   height: 22px;
 }
 
-.page-template-reset-template-php {
-  background: rgb(255, 255, 255);
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
 .page-template-reset-template-php .go-back-btn {
   display: flex;
   align-items: center;
@@ -692,6 +693,9 @@ h6 {
 }
 .page-template-reset-template-php .go-back-btn img {
   padding-right: 10px;
+}
+.page-template-reset-template-php {
+  background: rgb(255, 255, 255);
 }
 .page-template-reset-template-php header {
   display: none;
@@ -706,6 +710,10 @@ h6 {
 }
 .page-template-reset-template-php footer {
   display: none;
+}
+.page-template-reset-template-php {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 .page-template-reset-template-php .us-register {
   display: flex;
@@ -1039,6 +1047,16 @@ h6 {
   position: absolute;
   bottom: -5%;
   z-index: 0;
+}
+
+.btn-view {
+  display: flex;
+  margin: 0 auto !important;
+}
+
+.btn-explore {
+  display: flex;
+  margin: 0 auto !important;
 }
 
 .us-container {

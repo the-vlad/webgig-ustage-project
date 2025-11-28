@@ -162,3 +162,22 @@ function um_021522_change_reset_password_labels($translation, $text, $domain) {
     } 
     return $translation;
 }
+
+/**
+ * Redirect logged-in users away from registration pages
+ */
+add_action( 'template_redirect', function() {
+
+    if ( is_user_logged_in() ) {
+
+        $restricted_slugs = [
+            'customer-registration',
+            'entertainer-registration',
+        ];
+
+        if ( is_page( $restricted_slugs ) ) {
+            wp_redirect( home_url( '/account' ) );
+            exit;
+        }
+    }
+});

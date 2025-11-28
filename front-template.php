@@ -23,7 +23,7 @@ if ($hero):
     name="q"
     placeholder="Search..."
   />
-  <div class="searchBtn"><img src="http://ustage.local/wp-content/uploads/2025/11/1_search.svg"/></div>
+  <div class="searchBtn"><img src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/1_search.svg"/></div>
 </form> 
 
 <div class="hero-box">
@@ -31,20 +31,50 @@ if ($hero):
 
     <div class="hero-box--row">
 
-        <?php if (!empty($button1['button_name'])) : ?>
-            <div class="btn-active">
-                <?php echo esc_html($button1['button_name']); ?>
-            </div>
-        <?php endif; ?>
+        <?php
+        // Check logged-in user and their roles
+        $user = wp_get_current_user();
+        $roles = (array) $user->roles;
 
-        <?php if (!empty($button2['button_name'])) : ?>
-            <div class="btn-default">
-                <?php echo esc_html($button2['button_name']); ?>
-            </div>
+        $is_entertainer = in_array('um_entertainer', $roles);
+        $is_customer    = in_array('customer', $roles); // WooCommerce default role
+        ?>
+
+        <?php if ( $is_entertainer ) : ?>
+
+            <!-- Show ONLY for um_entertainer -->
+            <a href="#" class="btn-view btn-active">
+                View your Calendar
+            </a>
+
+        <?php elseif ( $is_customer ) : ?>
+
+            <!-- Show ONLY for customers -->
+            <a href="#" class="btn-explore btn-active">
+                Explore entertainers
+            </a>
+
+        <?php else : ?>
+
+            <!-- Default buttons for all other roles -->
+            <?php if (!empty($button1['button_name'])) : ?>
+                <a href="<?php echo $button1['button_url']; ?>" class="btn-active">
+                    <?php echo esc_html($button1['button_name']); ?>
+                </a>
+            <?php endif; ?>
+
+            <?php if (!empty($button2['button_name'])) : ?>
+                <a href="<?php echo $button2['button_url']; ?>" class="btn-default">
+                    <?php echo esc_html($button2['button_name']); ?>
+                </a>
+            <?php endif; ?>
+
         <?php endif; ?>
 
     </div>
 </div>
+
+
 
     <?php endif; ?>
 
@@ -120,9 +150,9 @@ if ($hero):
 
 <div class="us-container mac-studio">
   <div class="mac-studio-wrapper">
-      <img src="http://ustage.local/wp-content/uploads/2025/11/vector-left.svg" class="leftEl"/>     
+      <img src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/vector-left.svg" class="leftEl"/>     
       <img class="img-mac" src="<?php echo esc_url($hero['bottom_hero_img']); ?>" alt="">
-      <img src="http://ustage.local/wp-content/uploads/2025/11/vector-right.svg" class="rightEl"/>
+      <img src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/vector-right.svg" class="rightEl"/>
 
   </div>
 </div>
@@ -167,7 +197,7 @@ if ($enter):
         <?php endforeach; ?>
       <?php endif; ?>
     </div>
-                  <img class="side-img" src="http://ustage.local/wp-content/uploads/2025/11/u-side.svg"/>
+                  <img class="side-img" src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/u-side.svg"/>
 
             </div>
 
@@ -207,7 +237,7 @@ if ($faq): ?>
              <div class="faq-question">
                 <?php echo esc_html($item['title']); ?>
                 <span class="faq-icon">
-                    <img class="faq-icon-img" src="http://ustage.local/wp-content/uploads/2025/11/ic_round-plus.svg" />
+                    <img class="faq-icon-img" src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/ic_round-plus.svg" />
                 </span>
             </div>
 
@@ -266,7 +296,7 @@ if ($customer):
         <?php endforeach; ?>
       <?php endif; ?>
     </div>
-                      <img class="side-img" src="http://ustage.local/wp-content/uploads/2025/11/u-side2.svg"/>
+                      <img class="side-img" src="hhttps://ustage.mounti-creative.com/wp-content/uploads/2025/11/u-side2.svg"/>
 
             </div>
   </div>

@@ -2,22 +2,22 @@
 
 <?php get_header(); ?>
 
-<img class="upside-part" src="http://ustage.local/wp-content/uploads/2025/11/upside-part.svg"/>
+<img class="upside-part" src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/upside-part.svg"/>
 <div class="us-container">
 
 <div class="us-register">
 
     <div class="us-register--row">
         <div class="reg-left">
-            <a href="<?php echo home_url();?>" class="go-back-btn"><img src="http://ustage.local/wp-content/uploads/2025/11/backbtn.svg"/>Create Account</a>
+            <a href="<?php echo home_url();?>" class="go-back-btn"><img src="https://ustage.mounti-creative.com/wp-content/uploads/2025/11/backbtn.svg"/>Create Account</a>
             <div class="reg-txt">
                 <?php  $title = get_field('custom_desc'); 
                 echo $title;
                 ?>
                 </div>
 
-            <?php echo do_shortcode('[ultimatemember form_id="130"]'); ?>
-            <div class="login-txt">Already have an account? <a href="#">Log In</a></div>
+            <?php echo do_shortcode('[ultimatemember form_id="168"]'); ?>
+            <div class="login-txt">Already have an account? <a href="<?php echo home_url('/login/'); ?>">Log In</a></div>
         </div>
 
         <div class="reg-right">

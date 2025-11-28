@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function($){
 
     // Eye icon URL
-    var eyeOpen  = 'http://ustage.local/wp-content/uploads/2025/11/solar_eye-outline.svg';
+    var eyeOpen  = 'https://ustage.mounti-creative.com/wp-content/uploads/2025/11/solar_eye-outline.svg';
 
     $('.um-field-password input[type="password"], .um-field-user_password input[type="password"]').each(function(){
 
